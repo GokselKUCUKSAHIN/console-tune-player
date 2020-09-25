@@ -11,7 +11,6 @@ namespace ConsoleSongs
 
         public HarderBetterFasterStrongerSong()
         {
-            this.notes = new List<Note>();
             this.Build();
         }
         public override void Build()
@@ -415,14 +414,6 @@ namespace ConsoleSongs
             notes.Add(new Note(Note.G4, 250));
             notes.Add(new Note(Note.G4, 250));
             notes.Add(new Note(Note.G4, 250));
-        }
-
-        public override void Play()
-        {
-            foreach (Note note in this.notes)
-            {
-                note.PlayNote();
-            }
         }
     }
 }

@@ -8,8 +8,14 @@ namespace ConsoleSongs
 {
     abstract class Song
     {
-        public List<Note> notes;
+        public List<Note> notes = new List<Note>();
         public abstract void Build();
-        public abstract void Play();
+        public void Play()
+        {
+            foreach (Note note in this.notes)
+            {
+                note.PlayNote();
+            }
+        }
     }
 }
